@@ -15,9 +15,12 @@ test/
 ### Vuejs ###
 # Recommended template: Node.gitignore
 
-node_modules/
+# node_modules/
 dist/
 npm-debug.log
 yarn-error.log
 
 # End of https://www.toptal.com/developers/gitignore/api/vue,vuejs
+
+node_modules/*
+!node_modules/eslint*
