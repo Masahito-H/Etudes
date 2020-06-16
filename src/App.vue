@@ -9,16 +9,22 @@
 
 <script>
 import CpLoading from "@/components/CpLoading.vue";
-import { mapGetters, mapActions } from "vuex";
+//import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: 'App',
   components: { CpLoading },
   computed: {
-    ...mapGetters(["isLoading"])
+    //...mapGetters(["isLoading"])
+    isLoading: function(){
+      return this.$store.getters.isLoading;
+    }
   },
   methods: {
-    ...mapActions(["setStateLoading"])
+    //...mapActions(["setStateLoading"])
+    setStateLoading: function(payload){
+      this.$store.dispatch("setStateLoading", payload);
+    }
   }
 }
 </script>
@@ -32,7 +38,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #30bced;
-  
+
   box-sizing: border-box;
   background-color: #000;
   height: 100vh;
